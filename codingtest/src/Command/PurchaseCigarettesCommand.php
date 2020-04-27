@@ -49,7 +49,7 @@ class PurchaseCigarettesCommand extends Command
         $table_array = [];
 
         foreach($coins as $i => $item) {
-            $count_value = bcdiv(strval($change), strval($coins[$i]),2);
+            $count_value = bcdiv($change, $coins[$i],2);
 
             if ($count_value >= 1) {
                 array_push($table_array, array((int)$count_value, $coins[$i]));
