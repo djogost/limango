@@ -37,7 +37,7 @@ class PurchaseCigarettesCommand extends Command
 
         $coins = array(500, 200, 100, 50, 20, 10, 5, 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01);
 
-        if( $amount < 1 || $itemCount < 1){
+        if($amount <= 0.00 || $itemCount < 1){
             $output->writeln('Insert correct values');
             return;
         }
