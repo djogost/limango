@@ -55,9 +55,6 @@ class PurchaseCigarettesCommand extends Command
                 array_push($table_array, array((int)$count_value, $coins[$i]));
                 $change -= $coins[$i];
             }
-            else{
-                unset($coins[$i]);
-            }
         }
 
         $table = new Table($output);
